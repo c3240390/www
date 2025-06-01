@@ -4,26 +4,35 @@
   <meta charset="UTF-8">
   <title>画像入りの四角形</title>
   <style>
-    .rectangle {
-      width: 800px;
-      height: 600px;
-      background-color: orange;
-      border: 2px solid black;
-      position: relative; /* 子要素の絶対位置指定の基準にする */
-    }
+.rectangle {
+  width: 800px;
+  height: 600px;
+  background-color: skyblue;
+  border: 2px solid black;
+  margin: 20px auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
 
-    .image-box {
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
+.photo-section {
+  text-align: left;
+}
 
-    .image-box img {
-      width: 250px;
-      height: 250px;
-      object-fit: cover;
-      border: 2px solid white;
-    }
+.image {
+  width: 250px;
+  height: 250px;
+  object-fit: cover; /* 縦横比が異なる画像も正方形にトリミング */
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.caption {
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+}
   </style>
 </head>
 <body>
