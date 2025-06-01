@@ -2,11 +2,35 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>四角形</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>画像入りの四角形</title>
+  <style>
+    .rectangle {
+      width: 800px;
+      height: 600px;
+      background-color: orange;
+      border: 2px solid black;
+      position: relative; /* 子要素の絶対位置指定の基準にする */
+    }
+
+    .image-box {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .image-box img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border: 2px solid white;
+    }
+  </style>
 </head>
 <body>
-  <div class="rectangle"></div>
+  <div class="rectangle">
+    <div class="image-box">
+      <img src="images/omu.jpg" alt="オムライスの写真">
+    </div>
+  </div>
 </body>
 </html>
