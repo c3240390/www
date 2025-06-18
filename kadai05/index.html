@@ -4,10 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Box Design Practice</title>
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Box Design Practice</h1>
+    <h1>Box Design Practice</h1> 
     <section class="box1">
+    <h2>Box1</h2>
+    <p>このボックスはライトブルー背景で、ボーダーが濃い線、角は丸みを帯びています。</p>
+    <img src="img/box1.jpg" alt="Box1 Image">
+    </section>
+
+    <seciton class="box2">
+        <h2>Box2</h2>
+        <p>このボックスはライトオレンジ背景で、ボーダーと軽い影がついています。</p>
+        <img src="img/box2.jpg" alt="Box2 Image">
+    </seciton>
+    <section class="box3">
+        <h2>Box3</h2>
+        <p>このボックスはライトパープル背景で、ダッシュ戦のボーダーが適用されています。</p>
+        <img src="img/box3.jpg" alt="Box3 Image">
+        </section>
+
     
 </body>
+<style>
+    
+.box1{
+    background-color: lightblue;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding:20px;
+    margin-bottom: 20px;
+}
+.box2{
+    background-color: lightsalmon;
+    border: 2px solid #333;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.box3{
+    background-color: lavender;
+    border: 2px dashed #808080;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+</style>
 </html>
