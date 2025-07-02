@@ -15,3 +15,10 @@ header{
     color: white;
     text-align: center;
 }
+
+img{
+ width: 100%;        /* 幅いっぱいに表示 */
+  height: auto;
+  max-height: 150px;  /* ← ここで高さ制限して小さく */
+  object-fit: cover;
+}
