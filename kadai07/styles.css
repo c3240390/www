@@ -17,8 +17,8 @@ header{
 }
 
 img{
- width: 100%;        /* 幅いっぱいに表示 */
+ width: 50%; 
   height: auto;
-  max-height: 150px;  /* ← ここで高さ制限して小さく */
+  max-height: 50px;  
   object-fit: cover;
 }
