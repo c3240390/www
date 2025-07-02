@@ -19,6 +19,6 @@ header{
 img{
  width: 50%; 
   height: auto;
-  max-height: 50px;  
+  max-height: 150px;  
   object-fit: cover;
 }
