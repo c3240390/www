@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScriptのサンプル</title>
+    <style>
+        body{
+            padding: 0px 20px;
+        }
+        h1{
+            margin: 20px 0px 0px;
+        }
+        #pic{
+            border: solid 5px #333333;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+<h1>美しい風景</h1>
+<img src="pic.jpg" id="pic"><br>
+<button onclick="document.getElementById('pic').setAttribute('src','pic01.jpg');"><img src="img/pic01.jpg" alt="1"></button>
+<button onclick="document.getElementById('pic').setAttribute('src','pic02.jpg');"><img src="img/pic02.jpg" alt="2"></button>
+<button onclick="document.getElementById('pic').setAttribute('src','pic03.jpg');"><img src="img/pic03.jpg" alt="3"></button>
+<button onclick="document.getElementById('pic').setAttribute('src','pic04.jpg');"><img src="img/pic04.jpg" alt="4"></button>
+</body>
+</html>
