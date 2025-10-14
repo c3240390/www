@@ -15,14 +15,15 @@
 </head>
 
 <body>
-    <img src="tahiti01.jpg" > 
+    <img src="tahiti01.jpg" id="tahiti"> 
+
     <script>
+        const photo = document.getElementById('tahiti');
         function photoInfo(){
-            let photo = ['タヒチ'];
-            alert(photo + 'の写真です。');
+            alert('タヒチの写真です。');
         }
+        photo.addEventListener('click',photoInfo);
     </Script>
-    
-    
+
 </body>
 </html>
