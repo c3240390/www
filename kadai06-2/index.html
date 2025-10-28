@@ -9,8 +9,12 @@
 <body>
     <h1>座席の予約</h1>
     <p>東京会場　（予約受付中）</p>
-    <button onclick="showAnser()">予約する</button>
-
-    
+    <button onclick="showAnser()"><div id="message">予約する</div></button>
+    <script>
+        function showAnser(){
+            let anserBox = document.getElementById('message');
+            anserBox.innerHTML = 'ありがとうございました';
+        }
+    </script>
 </body>
 </html>
