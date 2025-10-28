@@ -8,8 +8,13 @@
 
 <body>
     <h1>座席の予約</h1>
-    <p>東京会場　<div id="OK">（予約受付中）</div></p>
+    <p>東京会場　<h5><div id="OK">（予約受付中）></div></h5></p>
     <button onclick="showAnser()"><div id="message">予約する</div></button>
+    <style>
+        h5{
+            color: red
+        }
+        </style>
     <script>
         function showAnser(){
             let anserText = document.getElementById('OK');
@@ -17,6 +22,7 @@
             let anserBox = document.getElementById('message');
             anserBox.innerHTML = 'ありがとうございました';
         }
+
     </script>
 </body>
 </html>
