@@ -16,24 +16,49 @@
 <body>
     <h1>人口の多い国ランキング</h1>
     <ol id="country">
-        <li>中国</li><div id="message"></div>
+        <li>中国</li>
         <li>インド</li>
         <li>アメリカ</li>
         <li>インドネシア</li>
     </ol>
-    <button onclick="showcountry()">国旗で表示</button>
+
+    <br>
+    <button id="toggleBtn">国旗で表示</button>
+
     <script>
-        let anserchn = document.getElementById('country');
-        function showcountry(){
-            anserBox.innerHTML = '<img src="flag_CHN.png">';
-        }
-         let anserind = document.getElementById('country');
-        function showcountry(){
-            anserBox.innerHTML = '<img src="flag_IND.png">';
-        }
+        const listItems = document.querySelectorAll("#country li");
+        const button = document.getElementById("toggleBtn");
+
+        // ローカル画像ファイルを指定（index.htmlと同じフォルダにあると仮定）
+        const flags = {
+            "中国": "flag_CHN.png",
+            "インド": "flag_IND.png",
+            "アメリカ": "flag_USA.png",
+            "インドネシア": "flag_IDN.png"
+        };
+
+        let showingFlags = false; // 状態を記録
+
+        button.addEventListener("click", () => {
+            if (!showingFlags) {
+                // 国旗を表示
+                listItems.forEach(li => {
+                    const country = li.textContent.trim();
+                    const flagUrl = flags[country];
+                    li.innerHTML = `<img src="${flagUrl}" alt="${country}の国旗">`;
+                });
+                button.textContent = "文字で表示";
+                showingFlags = true;
+            } else {
+                // 元の文字に戻す
+                const countryNames = Object.keys(flags);
+                listItems.forEach((li, i) => {
+                    li.textContent = countryNames[i];
+                });
+                button.textContent = "国旗で表示";
+                showingFlags = false;
+            }
+        });
     </script>
-
-
- 
 </body>
 </html>
