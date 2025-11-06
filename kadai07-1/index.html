@@ -29,36 +29,27 @@
         const listItems = document.querySelectorAll("#country li");
         const button = document.getElementById("toggleBtn");
 
-        // ローカル画像ファイルを指定（index.htmlと同じフォルダにあると仮定）
+        // ローカル画像ファイルを指定（index.htmlと同じフォルダにある想定）
         const flags = {
             "中国": "flag_CHN.png",
             "インド": "flag_IND.png",
             "アメリカ": "flag_USA.png",
             "インドネシア": "flag_IDN.png"
         };
-        
 
-        let showingFlags = false; // 状態を記録
+        let alreadyChanged = false; // すでに国旗に変えたかどうかを記録
 
         button.addEventListener("click", () => {
-            if (!showingFlags) {
-                // 国旗を表示
-                listItems.forEach(li => {
-                    const country = li.textContent.trim();
-                    const flagUrl = flags[country];
-                    li.innerHTML = `<img src="${flagUrl}" alt="${country}の国旗">`;
-                });
-                button.textContent = "文字で表示";
-                showingFlags = true;
-            } else {
-                // 元の文字に戻す
-                const countryNames = Object.keys(flags);
-                listItems.forEach((li, i) => {
-                    li.textContent = countryNames[i];
-                });
-                button.textContent = "国旗で表示";
-                showingFlags = false;
-            }
+            if (alreadyChanged) return; // すでに国旗表示済みなら何もしない
+
+            // 国旗を表示
+            listItems.forEach(li => {
+                const country = li.textContent.trim();
+                const flagUrl = flags[country];
+                li.innerHTML = `<img src="${flagUrl}" alt="${country}の国旗">`;
+            });
+
+            alreadyChanged = true; // 次からは変わらないようにする
         });
     </script>
 </body>
