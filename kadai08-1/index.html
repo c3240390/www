@@ -8,9 +8,8 @@
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: #f8f8f8;
-      text-align: center;
       margin: 0;
-      padding: 20px;
+      padding: 30px;
     }
 
     #showButton {
@@ -22,6 +21,8 @@
       border-radius: 6px;
       cursor: pointer;
       transition: background-color 0.3s;
+      display: block;
+      margin: 50px auto;
     }
 
     #showButton:hover {
@@ -29,30 +30,28 @@
     }
 
     #photoGallery {
-      display: none; 
-      margin-top: 30px;
+      display: none; /* 最初は非表示 */
+      width: 100%;
+      max-width: 1000px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(3, 1fr); /* 1行3枚 */
       gap: 15px;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
+      justify-items: start; /* 左寄せ */
+      margin: 0 auto;
     }
 
     #photoGallery img {
       width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s;
-    }
-
-    #photoGallery img:hover {
-      transform: scale(1.05);
+      aspect-ratio: 1 / 1; /* 正方形 */
+      object-fit: cover;   /* トリミングして正方形を維持 */
+      border-radius: 4px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
     }
   </style>
 </head>
 <body>
-  <h1>写真ギャラリー</h1>
+  <h1>写真の一覧</h1>
+  <p>ボタンをクリックすると、画像が一覧表示されます。</p>
   <button id="showButton">写真を表示</button>
 
   <div id="photoGallery">
@@ -71,8 +70,8 @@
     const gallery = document.getElementById('photoGallery');
 
     showButton.addEventListener('click', () => {
-      showButton.remove();
-      gallery.style.display = 'grid'; 
+      showButton.remove();        // ボタンを消す
+      gallery.style.display = 'grid'; // 写真を表示
     });
   </script>
 </body>
