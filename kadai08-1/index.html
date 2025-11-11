@@ -31,21 +31,20 @@
 
     /* ギャラリー初期非表示 */
     #photoGallery {
-      display: none; /* ←ここだけ！これで必ず非表示 */
-      width: 100%;
-      max-width: 1000px;
-      gap: 15px;
+      display: none; /* 最初は非表示 */
+      width: 1000px; /* 大きめサイズ */
+      max-width: 100%; 
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 1行3枚 */
+      gap: 0; /* 写真同士くっつける */
       justify-items: start; /* 左揃え */
-      display: grid; /* gridにするのはJSで切り替える */
-      grid-template-columns: repeat(3, 1fr);
     }
 
     #photoGallery img {
       width: 100%;
       aspect-ratio: 1 / 1; /* 正方形 */
-      object-fit: cover;
-      border-radius: 4px;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+      object-fit: cover;   /* 切り取りで正方形維持 */
+      display: block;      /* 余白防止 */
     }
   </style>
 </head>
@@ -55,7 +54,6 @@
   <button id="showButton">写真を表示</button>
 
   <div id="photoGallery">
-    <div id="photoGallery">
     <img src="photo_1.jpg" alt="写真1">
     <img src="photo_2.jpg" alt="写真2">
     <img src="photo_3.jpg" alt="写真3">
