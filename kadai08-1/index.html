@@ -14,7 +14,7 @@
 
     /* シンプルな灰色ボタン */
     #showButton {
-      padding: 6px 20px;  /* 高さを低く */
+      padding: 6px 20px;
       font-size: 16px;
       background-color: #ccc;
       color: #000;
@@ -31,17 +31,11 @@
 
     /* ギャラリー初期非表示 */
     #photoGallery {
-      display: none; /* ←ここだけ！初期は絶対非表示 */
+      display: none; /* 初期は非表示 */
       width: 100%;
       max-width: 1200px;
       margin: 0 auto;
-    }
-
-    /* ギャラリーを表示したときのスタイル */
-    .grid-active {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); /* PC: 3列 */
-      gap: 0; /* 写真同士くっつける */
+      gap: 0;
       justify-items: start;
     }
 
@@ -54,18 +48,17 @@
 
     /* タブレット：2列 */
     @media (max-width: 900px) {
-      .grid-active {
+      #photoGallery.grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
 
     /* スマホ：1列 */
     @media (max-width: 600px) {
-      .grid-active {
+      #photoGallery.grid {
         grid-template-columns: repeat(1, 1fr);
       }
     }
-
   </style>
 </head>
 <body>
@@ -89,9 +82,26 @@
     const gallery = document.getElementById('photoGallery');
 
     showButton.addEventListener('click', () => {
-      showButton.remove();           // ボタンを消す
-      gallery.classList.add('grid-active'); // 写真を表示
+      showButton.remove();                // ボタンを消す
+      gallery.style.display = 'grid';     // 写真を表示
+      gallery.style.gridTemplateColumns = 'repeat(3, 1fr)'; // 初期は3列
     });
+
+    // レスポンシブ対応
+    function updateColumns() {
+      if (gallery.style.display === 'grid') {
+        const width = window.innerWidth;
+        if (width <= 600) {
+          gallery.style.gridTemplateColumns = 'repeat(1, 1fr)';
+        } else if (width <= 900) {
+          gallery.style.gridTemplateColumns = 'repeat(2, 1fr)';
+        } else {
+          gallery.style.gridTemplateColumns = 'repeat(3, 1fr)';
+        }
+      }
+    }
+
+    window.addEventListener('resize', updateColumns);
   </script>
 </body>
 </html>
