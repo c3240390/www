@@ -8,9 +8,17 @@
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: #f8f8f8;
-      text-align: center;
       margin: 0;
-      padding: 20px;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #333;
     }
 
     #showButton {
@@ -28,26 +36,24 @@
       background-color: #005a9e;
     }
 
+    /* ギャラリー */
     #photoGallery {
-      display: none; 
-      margin-top: 30px;
+      display: none; /* 最初は非表示 */
+      margin: 30px auto 0 auto;
+      width: 90%;
+      max-width: 1000px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(3, 1fr); /* 1行3枚 */
       gap: 15px;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
+      justify-items: start; /* 左寄せ */
     }
 
     #photoGallery img {
       width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s;
-    }
-
-    #photoGallery img:hover {
-      transform: scale(1.05);
+      aspect-ratio: 1 / 1; /* 正方形にする */
+      object-fit: cover; /* トリミングして正方形を維持 */
+      border-radius: 4px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
     }
   </style>
 </head>
@@ -69,10 +75,18 @@
   <script>
     const showButton = document.getElementById('showButton');
     const gallery = document.getElementById('photoGallery');
+    const title = document.querySelector('h1');
 
     showButton.addEventListener('click', () => {
       showButton.remove();
-      gallery.style.display = 'grid'; 
+      title.remove();      
+
+      
+      document.body.style.display = "block";
+      document.body.style.padding = "30px";
+
+    
+      gallery.style.display = 'grid';
     });
   </script>
 </body>
