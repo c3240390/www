@@ -16,8 +16,8 @@
     #showButton {
       padding: 6px 20px;  /* 高さを低く */
       font-size: 16px;
-      background-color: #ccc; /* 灰色背景 */
-      color: #000;            /* 黒文字 */
+      background-color: #ccc;
+      color: #000;
       border: none;
       border-radius: 4px;
       cursor: pointer;
@@ -26,26 +26,46 @@
     }
 
     #showButton:hover {
-      background-color: #bbb; /* ホバーで少し濃く */
+      background-color: #bbb;
     }
 
     /* ギャラリー初期非表示 */
     #photoGallery {
-      display: none; /* 最初は非表示 */
-      width: 1000px; /* 大きめサイズ */
-      max-width: 100%; 
+      display: none; /* ←ここだけ！初期は絶対非表示 */
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* ギャラリーを表示したときのスタイル */
+    .grid-active {
       display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 1行3枚 */
+      grid-template-columns: repeat(3, 1fr); /* PC: 3列 */
       gap: 0; /* 写真同士くっつける */
-      justify-items: start; /* 左揃え */
+      justify-items: start;
     }
 
     #photoGallery img {
       width: 100%;
-      aspect-ratio: 1 / 1; /* 正方形 */
-      object-fit: cover;   /* 切り取りで正方形維持 */
-      display: block;      /* 余白防止 */
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
     }
+
+    /* タブレット：2列 */
+    @media (max-width: 900px) {
+      .grid-active {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* スマホ：1列 */
+    @media (max-width: 600px) {
+      .grid-active {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -70,7 +90,7 @@
 
     showButton.addEventListener('click', () => {
       showButton.remove();           // ボタンを消す
-      gallery.style.display = 'grid'; // 写真を表示
+      gallery.classList.add('grid-active'); // 写真を表示
     });
   </script>
 </body>
