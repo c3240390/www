@@ -3,9 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>要素の追加と削除</title>
+      <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f8f8;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+
+    #showButton {
+      padding: 12px 24px;
+      font-size: 18px;
+      background-color: #0078d7;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    #showButton:hover {
+      background-color: #005a9e;
+    }
+
+    #photoGallery {
+      display: none; 
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #photoGallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+
+    #photoGallery img:hover {
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
-    
+  <h1>写真ギャラリー</h1>
+  <button id="showButton">写真を表示</button>
+
+  <div id="photoGallery">
+    <img src="photo_1.jpg" alt="写真1">
+    <img src="photo_2.jpg" alt="写真2">
+    <img src="photo_3.jpg" alt="写真3">
+    <img src="photo_4.jpg" alt="写真4">
+    <img src="photo_5.jpg" alt="写真5">
+    <img src="photo_6.jpg" alt="写真6">
+    <img src="photo_7.jpg" alt="写真7">
+    <img src="photo_8.jpg" alt="写真8">
+  </div>
+
+  <script>
+    const showButton = document.getElementById('showButton');
+    const gallery = document.getElementById('photoGallery');
+
+    showButton.addEventListener('click', () => {
+      showButton.remove();
+      gallery.style.display = 'grid'; 
+    });
+  </script>
 </body>
 </html>
