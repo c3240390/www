@@ -29,7 +29,7 @@
     }
 
     #photoGallery {
-      display: none; /* 最初は非表示 */
+      display: none; 
       margin-top: 30px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -71,8 +71,8 @@
     const gallery = document.getElementById('photoGallery');
 
     showButton.addEventListener('click', () => {
-      showButton.remove();  // ボタンを削除
-      gallery.style.display = 'grid';  // 写真を表示
+      showButton.remove();
+      gallery.style.display = 'grid'; 
     });
   </script>
 </body>
