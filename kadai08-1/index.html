@@ -14,7 +14,7 @@
 
     /* シンプルな灰色ボタン */
     #showButton {
-      padding: 6px 20px; /* 高さを低く */
+      padding: 6px 20px;  /* 高さを低く */
       font-size: 16px;
       background-color: #ccc; /* 灰色背景 */
       color: #000;            /* 黒文字 */
@@ -31,13 +31,13 @@
 
     /* ギャラリー初期非表示 */
     #photoGallery {
-      display: none; /* 最初は非表示 */
+      display: none; /* ←ここだけ！これで必ず非表示 */
       width: 100%;
       max-width: 1000px;
-      grid-template-columns: repeat(3, 1fr); /* 1行3枚 */
       gap: 15px;
       justify-items: start; /* 左揃え */
-      display: grid;
+      display: grid; /* gridにするのはJSで切り替える */
+      grid-template-columns: repeat(3, 1fr);
     }
 
     #photoGallery img {
@@ -55,6 +55,7 @@
   <button id="showButton">写真を表示</button>
 
   <div id="photoGallery">
+    <div id="photoGallery">
     <img src="photo_1.jpg" alt="写真1">
     <img src="photo_2.jpg" alt="写真2">
     <img src="photo_3.jpg" alt="写真3">
