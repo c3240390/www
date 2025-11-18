@@ -21,33 +21,27 @@ document.getElementById("btn").addEventListener("click", function() {
     
     let output = "";
     
-    // ▼ クリック回数による分岐
     if (clickCount === 1) {
-        // ★ を1個
         for (let i = 0; i < 1; i++) {
             output += "★";
         }
     } 
     else if (clickCount === 2) {
-        // ★ を5個
         for (let i = 0; i < 5; i++) {
             output += "★";
         }
     } 
     else if (clickCount === 3) {
-        // 1〜5を表示
         for (let i = 1; i <= 5; i++) {
             output += i + " ";
         }
     } 
     else if (clickCount === 4) {
-        // 偶数 2,4,6,8,10 を表示
         for (let i = 2; i <= 10; i += 2) {
             output += i + " ";
         }
     } 
     else if (clickCount === 5) {
-        // 1〜クリック回数までの合計値
         let sum = 0;
         for (let i = 1; i <= clickCount; i++) {
             sum += i;
@@ -55,13 +49,11 @@ document.getElementById("btn").addEventListener("click", function() {
         output = "合計値: " + sum;
     } 
     else {
-        // 6回目以降
         output = "クリアしました。カウントを0に戻します。";
         clickCount = 0;
         document.getElementById("count").textContent = 0;
     }
 
-    // 結果表示
     document.getElementById("result").textContent = output;
 });
 </script>
