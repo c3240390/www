@@ -4,16 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>breakの活用</title>
-
+<style>
+    .big_font{
+        font-size: 1.4em;
+    }
+</style>
 </head>
+
 <body>
+
 <h2>問題</h2>
 <p>次の方程式を満たす解をJavaScriptで求めます。</p>
-<h1>x<sup>3</sup>-53x<sup>2</sup>+620x-1036=0</h1>
+
+<h1>x<sup>3</sup> - 53x<sup>2</sup> + 620x - 1036 = 0</h1>
+
 <p>※この方程式の解は3個あり、すべて1以上の整数です。</p>
 
 <button onclick="show()">結果を見る</button>
-<div id="message"></div>
+
+<h1 id="message"></h1>
 
 <script>
 // <<<ここに関数show()を作成>>>
@@ -37,9 +46,9 @@ function show() {
         }
     }
 
-    // 結果表示
+    // 結果表示（H1サイズ）
     document.getElementById("message").innerHTML =
-         + anser.join("、 ") +"が解です。";
+        "見つかった解 → " + anser.join("、 ");
 }
 </script>
 
