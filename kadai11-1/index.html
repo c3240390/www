@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>breakの活用</title>
+
+</head>
+<body>
+    <h2>問題</h2>
+    <p>次の方程式を満たす解をJavaScriptで求めます。</p>
+    <h1>x<sup>3</sup>-53x<sup>2</sup>+620x-1036=0</h1>
+    <p>※この方程式の解は３個あり、すべて１以上の整数です。</p>
+     <button id="showAnser">結果を見る</button>
+     <script>
+// <<<ここに関数show()を作成>>>
+function show() {
+    let anser = [];   // 見つかった解を保存する配列
+    let count = 0;    // 解の個数をカウント
+
+    // x を 1, 2, 3, ... と増やして探索
+    for (let x = 1; x <= 200; x++) {
+
+        let y = x*x*x - 53*x*x + 620*x - 1036;
+
+        if (y === 0) {
+            anser.push(x);
+            count++;
+
+            // 解が3つ見つかったら強制終了
+            if (count === 3) {
+                break;
+            }
+        }
+    }
+
+    // 結果表示
+    document.getElementById("message").innerHTML =
+        "見つかった解 → " + anser.join("、 ");
+}
+</script>
+
+</body>
+</html>
