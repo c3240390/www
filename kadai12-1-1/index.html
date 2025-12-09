@@ -8,11 +8,30 @@
 <body>
     <h1>1~10で割り切れる数字</h1>
     <p>１，２，３，４，５，６，７，８，９，１０で<br>割り切れる最小の数値をJavaScriptで求めます。</p>
-    <button id="ShowAnser">結果を見る</button>
+    <button onclick="ShowAnser()">結果を見る</button>
     <div style="background-color: #ff9933; color: #000000; width: 400px; padding: 20px; text-align: center; border-radius: 5px;">
   ここに結果が表示されます。
 </div>
-
+<script>
+    function ShowAnser(){
+        let num = 10;
+        while(true){
+            if(
+                num % 1 == 0 &&
+                num % 2 == 0 &&
+                num % 3 == 0 &&
+                num % 4 == 0 &&
+                num % 5 == 0 &&
+                num % 6 == 0 &&
+                num % 7 == 0 &&
+                num % 8 == 0 &&
+                num % 9 == 0 &&
+                num % 10 == 0 
+            )
+            num++;
+        }
+    }
+</script>
         
 
 
