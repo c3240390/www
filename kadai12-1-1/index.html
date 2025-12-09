@@ -13,29 +13,27 @@
   ここに結果が表示されます。
 </div>
 <script>
-    function ShowAnser(){
-        let num = 10;
-        while(true){
-            if(
-                num % 1 == 0 &&
-                num % 2 == 0 &&
-                num % 3 == 0 &&
-                num % 4 == 0 &&
-                num % 5 == 0 &&
-                num % 6 == 0 &&
-                num % 7 == 0 &&
-                num % 8 == 0 &&
-                num % 9 == 0 &&
-                num % 10 == 0 
-            )
-            num++;
+function ShowAnser() {
+    let num = 10; 
+    while (true) {
+        if (
+            num % 1 === 0 &&
+            num % 2 === 0 &&
+            num % 3 === 0 &&
+            num % 4 === 0 &&
+            num % 5 === 0 &&
+            num % 6 === 0 &&
+            num % 7 === 0 &&
+            num % 8 === 0 &&
+            num % 9 === 0 &&
+            num % 10 === 0
+        ) {
+            break; 
         }
+        num++;
     }
 </script>
         
 
-
-
-    
 </body>
 </html>
