@@ -8,17 +8,33 @@
 <body>
     <h1>n~mで割り切れる数字</h1>
     <p>1~10の好きな範囲で<br>割り切れる最小の数値をJavaScriptで求めます。</p>
-    <button onclick="ShowRange()">範囲を指定</button>
-    <div id = "ShowRange"style="background-color: #ff9933; color: #000000; width: 400px; padding: 20px; text-align: center; border-radius: 5px;">
-  ここに結果が表示されます。</div>
 
-  <script>
-    function ShowRange(){
-        let minNumber = parseInt(prompt("範囲の最小値を1~10で入力してください"));
-        let maxNumber = parseInt(prompt("範囲の最大値を1~10で入力してください"));
+    <button onclick="showRange()">範囲を指定</button>
+
+    <div id="result"
+        style="background-color:#ff9933; color:#000; width:400px; padding:20px; text-align:center; border-radius:5px;">
+        ここに結果が表示されます。
+    </div>
+
+<script>
+function showRange() {
+    let minNumber = parseInt(prompt("範囲の最小値を1~10で入力してください"));
+    let maxNumber = parseInt(prompt("範囲の最大値を1~10で入力してください"));
+
+    // 入力チェック
+    if (
+        isNaN(minNumber) || isNaN(maxNumber) ||
+        minNumber < 1 || maxNumber > 10 ||
+        minNumber > maxNumber
+    ) {
+        document.getElementById("result").textContent =
+            "正しい数値（1〜10）を入力してください。";
+        return;
     }
 
-       while (true) {
+    let result = 1;
+
+    while (true) {
         let divisible = true;
 
         for (let i = minNumber; i <= maxNumber; i++) {
@@ -32,23 +48,10 @@
         result++;
     }
 
-    document.getElementById("ShowRange").textContent =
+    document.getElementById("result").textContent =
         `${minNumber}〜${maxNumber}で割り切れる最小の数値は ${result} です。`;
+}
 </script>
 
-  </script>
-
-
-
-
-
-
-
-
-
-
-
-
-    
 </body>
 </html>
