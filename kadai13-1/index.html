@@ -18,6 +18,24 @@
         let maxNumber = parseInt(prompt("範囲の最大値を1~10で入力してください"));
     }
 
+       while (true) {
+        let divisible = true;
+
+        for (let i = minNumber; i <= maxNumber; i++) {
+            if (result % i !== 0) {
+                divisible = false;
+                break;
+            }
+        }
+
+        if (divisible) break;
+        result++;
+    }
+
+    document.getElementById("ShowRange").textContent =
+        `${minNumber}〜${maxNumber}で割り切れる最小の数値は ${result} です。`;
+</script>
+
   </script>
 
 
