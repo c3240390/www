@@ -1,12 +1,13 @@
 header{
     background-color: #003300;
+    color: white;
 }
 
 .square-container{
     margin: 40px 0;
 }
 .square{
-    width: 200px;
+    width: 180px;
     height: 120px;
-    margin: 0 8px;
+    margin: 0 8px 15px 8px;
 }
