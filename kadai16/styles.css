@@ -9,7 +9,8 @@ header{
 .square{
     background-color: aqua;
     width: 60%;
-    height: 200px;
+    max-width: 600px;
+    height: 250px;
     margin: 0 8px 15px 8px;
     text-align: left;
     padding: 10px;
