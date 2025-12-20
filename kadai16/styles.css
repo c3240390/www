@@ -7,7 +7,7 @@ header{
     margin: 40px 0;
 }
 .square{
-    color: aqua;
+    background-color: aqua;
     width: 400px;
     height: 200px;
     margin: 0 8px 15px 8px;
