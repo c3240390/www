@@ -18,6 +18,10 @@ header{
 .square1 h3{
         color: gold;
     }
+.square1 img{
+    width: 50;
+    height: 50;
+}
 
 .square2{
     background-color: aqua;
