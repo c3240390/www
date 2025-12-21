@@ -19,6 +19,35 @@ header{
 .square1 h3{
         color: gold;
     }
+
+.square2{
+    background-color: aqua;
+    width: 60%;
+    max-width: 600px;
+    height: 250px;
+    margin: 0 8px 15px 8px;
+    text-align: left;
+    padding: 10px;
+    overflow: auto;
+}
+.square2 h3{
+    color: silver;
+}
+
+.square3{
+    background-color: aqua;
+    width: 60%;
+    max-width: 600px;
+    height: 250px;
+    margin: 0 8px 15px 8px;
+    text-align: left;
+    padding: 10px;
+    overflow: auto;
+}
+.square3 h3{
+    color: brown;
+}
+
 a{
     color: white;
 }
