@@ -6,7 +6,10 @@ header{
 .square-container{
     margin: 40px 0;
 }
-.square{
+.square1{
+    .h3{
+        color: gold;
+    }
     background-color: aqua;
     width: 60%;
     max-width: 600px;
