@@ -7,9 +7,6 @@ header{
     margin: 40px 0;
 }
 .square1{
-    h3{
-        color: gold;
-    }
     background-color: aqua;
     width: 60%;
     max-width: 600px;
@@ -19,6 +16,9 @@ header{
     padding: 10px;
     overflow: auto;
 }
+.square1 h3{
+        color: gold;
+    }
 a{
     color: white;
 }
