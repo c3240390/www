@@ -20,7 +20,7 @@ header{
     }
 .square1 img{
     width: 50;
-    height: 50;
+    height: auto;
 }
 
 .square2{
