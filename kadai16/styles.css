@@ -8,9 +8,9 @@ header{
 }
 .square1{
     background-color: aqua;
-    width: 60%;
-    max-width: 600px;
-    height: 250px;
+    width: 80%;
+    max-width: 800px;
+    height: 300px;
     margin: 0 8px 15px 8px;
     text-align: left;
     padding: 10px;
