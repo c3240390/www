@@ -23,7 +23,7 @@
     <h1>HTMLの表示</h1>
     <p>ボックス内の表示されている部分のHTMLを表示します。</p>
 
-        <div class="box1">
+        <div class="box1" id="sourceBox">
         <h3>人口800万人以上の都道府県</h3>
             <ul>
                 <li>東京都</li>
@@ -31,12 +31,27 @@
                 <li>大阪府</li>
             </ul>
     </div>
+
     <br>
     <button onclick="ShowHTML()">HTMLを表示</button>
+    <br>
 
-    <div class="box2">
+    <div class="box2" id="resultBox">
         <p>ここにHTMLが表示されます。</p>
     </div>
+
+    <script>
+        function ShowHTML(){
+            const source = document.getElementById("sourseBox");
+
+            const result = document.getElementById("resultBox");
+
+            const htmlText = source.innerHTML;
+
+            result.textContent = htmlText;
+        }
+
+    </script>
 
 
     
