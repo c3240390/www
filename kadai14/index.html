@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>プロパティ</title>
     <style>
-        .box{
+        .box1{
             width: 400px;
             height: 150px;
+            border: 3px solid black;
+        }
+
+        .box2{
+            width: 400px;
+            height: 100px;
             border: 3px solid black;
         }
     </style>
@@ -17,7 +23,7 @@
     <h1>HTMLの表示</h1>
     <p>ボックス内の表示されている部分のHTMLを表示します。</p>
 
-        <div class="box">
+        <div class="box1">
         <h3>人口800万人以上の都道府県</h3>
             <ul>
                 <li>東京都</li>
@@ -25,8 +31,13 @@
                 <li>大阪府</li>
             </ul>
     </div>
-
+    <br>
     <button onclick="ShowHTML()">HTMLを表示</button>
+
+    <div class="box2">
+        <p>ここにHTMLが表示されます。</p>
+    </div>
+
 
     
 </body>
