@@ -59,6 +59,9 @@ function showResult2(isCorrect) {
         result.textContent = "✕ 不正解　正解：ヴェルトラウム～銘銘編～";
     }
 
+       document.getElementById("Answer2").classList.add("NewPage");
+   document.getElementById("NextBtn2").classList.remove("NewPage");
+
 }
 
 function A21() {
@@ -78,3 +81,8 @@ function A22() {
     showResult2(true);
 }
 
+function ShowQuiz2(){
+    document.getElementById("quizPage2").classList.add("NewPage");
+    document.getElementById("quizPage3").classList.remove("NewPage");
+
+}
