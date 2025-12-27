@@ -95,7 +95,7 @@ function showResult3(isCorrect) {
     if (isCorrect) {
         result.textContent = "〇 正解！";
     } else {
-        result.textContent = "✕ 不正解　正解：StaRt";
+        result.textContent = "✕ 不正解　正解：ニュー・マイ・ノーマル";
     }
 
        document.getElementById("Answer3").classList.add("NewPage");
@@ -158,4 +158,44 @@ function A44() {
 
 function A43() {
     showResult4(true);
+}
+
+
+
+
+
+function ShowQuiz5() {
+    document.getElementById("quizPage4").classList.add("NewPage");
+    document.getElementById("quizPage5").classList.remove("NewPage");
+}
+
+function showResult4(isCorrect) {
+    const result = document.getElementById("result5");
+
+    if (isCorrect) {
+        result.textContent = "〇 正解！";
+    } else {
+        result.textContent = "✕ 不正解　正解：7月8日";
+    }
+
+       document.getElementById("Answer5").classList.add("NewPage");
+   document.getElementById("NextBtn5").classList.remove("NewPage");
+
+}
+
+function A51() {
+    showResult5(false);
+}
+
+function A52() {
+    showResult5(false);
+}
+
+function A53() {
+    showResult5(false);
+}
+
+
+function A54() {
+    showResult5(true);
 }
