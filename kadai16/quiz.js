@@ -89,7 +89,7 @@ function ShowQuiz3() {
     document.getElementById("quizPage3").classList.remove("NewPage");
 }
 
-function showResult2(isCorrect) {
+function showResult3(isCorrect) {
     const result = document.getElementById("result3");
 
     if (isCorrect) {
