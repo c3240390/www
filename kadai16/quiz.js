@@ -6,7 +6,6 @@ function ShowQuiz(){
 
 function showResult(isCorrect) {
     const result = document.getElementById("result");
-    const nextBtn = document.getElementById("nextPage");
 
     if (isCorrect) {
         result.textContent = "〇 正解！";
@@ -14,7 +13,6 @@ function showResult(isCorrect) {
         result.textContent = "✕ 不正解　正解：Atlantis";
     }
 
-    nextBtn.style.display = "block";
 }
 
 
@@ -35,24 +33,19 @@ function A4() {
     showResult(true);
 }
 
-function nextQuestion() {
 
-    document.getElementById("result");
-    document.getElementById("nextPage");
-}
 
-function ShowQuiz(){
-    document.getElementById("nextPage").classList.add("NewPage2");
-    document.getElementById("quizPage2").classList.remove("NewPage2");
+function ShowQuiz2(){
+    document.getElementById("quizPage").classList.add("NewPage");
+    document.getElementById("quizPage2").classList.remove("NewPage");
 
 }
 
 
 
 
-function showResult(isCorrect) {
-    const result = document.getElementById("result");
-    const nextBtn = document.getElementById("nextPage");
+function showResult2(isCorrect) {
+    const result = document.getElementById("result2");
 
     if (isCorrect) {
         result.textContent = "〇 正解！";
@@ -60,34 +53,22 @@ function showResult(isCorrect) {
         result.textContent = "✕ 不正解　正解：ヴェルトラウム～銘銘編～";
     }
 
-    nextBtn.style.display = "block";
 }
 
 function A21() {
-    showResult(false);
+    showResult2(false);
 }
 
 function A23() {
-    showResult(false);
+    showResult2(false);
 }
 
 function A24() {
-    showResult(false);
+    showResult2(false);
 }
 
 
-function 22() {
-    showResult(true);
+function A22() {
+    showResult2(true);
 }
 
-function nextQuestion2() {
-
-    document.getElementById("result2");
-    document.getElementById("nextPage2");
-}
-
-function ShowQuiz2(){
-    document.getElementById("nextPage2").classList.add("NewPage2");
-    document.getElementById("quizPage2").classList.remove("NewPage2");
-
-}
