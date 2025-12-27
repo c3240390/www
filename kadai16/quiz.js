@@ -37,6 +37,12 @@ function A4() {
 
 function nextQuestion() {
 
-    document.getElementById("result").textContent = "";
-    document.getElementById("nextPage")
+    document.getElementById("result");
+    document.getElementById("nextPage");
+}
+
+function ShowQuiz(){
+    document.getElementById("nextPage").classList.add("NewPage2");
+    document.getElementById("quizPage2").classList.remove("NewPage2");
+
 }
