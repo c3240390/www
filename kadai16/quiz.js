@@ -80,13 +80,13 @@ function 22() {
     showResult(true);
 }
 
-function nextQuestion() {
+function nextQuestion2() {
 
     document.getElementById("result2");
     document.getElementById("nextPage2");
 }
 
-function ShowQuiz(){
+function ShowQuiz2(){
     document.getElementById("nextPage2").classList.add("NewPage2");
     document.getElementById("quizPage2").classList.remove("NewPage2");
 
