@@ -39,16 +39,14 @@ function A4() {
 
 
 
+
+
+
 function ShowQuiz2(){
     document.getElementById("quizPage1").classList.add("NewPage");
     document.getElementById("quizPage2").classList.remove("NewPage");
 
 }
-
-
-
-
-
 
 function showResult2(isCorrect) {
     const result = document.getElementById("result2");
@@ -81,3 +79,43 @@ function A22() {
     showResult2(true);
 }
 
+
+
+
+
+
+function ShowQuiz3() {
+    document.getElementById("quizPage2").classList.add("NewPage");
+    document.getElementById("quizPage3").classList.remove("NewPage");
+}
+
+function showResult2(isCorrect) {
+    const result = document.getElementById("result3");
+
+    if (isCorrect) {
+        result.textContent = "〇 正解！";
+    } else {
+        result.textContent = "✕ 不正解　正解：StaRt";
+    }
+
+       document.getElementById("Answer2").classList.add("NewPage");
+   document.getElementById("NextBtn2").classList.remove("NewPage");
+
+}
+
+function A32() {
+    showResult2(false);
+}
+
+function A33() {
+    showResult2(false);
+}
+
+function A34() {
+    showResult2(false);
+}
+
+
+function A31() {
+    showResult2(true);
+}
