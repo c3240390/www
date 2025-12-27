@@ -13,7 +13,14 @@ function showResult(isCorrect) {
         result.textContent = "✕ 不正解　正解：Atlantis";
     }
 
+    document.querySelectorAll("#quizPage button").forEach(btn => {
+        btn.disabled = true;
+    });
+
+        document.getElementById("quizPage2").classList.remove("NewPage");
 }
+
+
 
 
 function A1() {
@@ -40,6 +47,8 @@ function ShowQuiz2(){
     document.getElementById("quizPage2").classList.remove("NewPage");
 
 }
+
+
 
 
 
