@@ -1,3 +1,5 @@
+let score = 0;
+
 function ShowQuiz(){
     document.getElementById("QuizButton").classList.add("NewPage");
     document.getElementById("quizPage1").classList.remove("NewPage");
@@ -9,6 +11,7 @@ function showResult(isCorrect) {
 
     if (isCorrect) {
         result.textContent = "〇 正解！";
+        score++
     } else {
         result.textContent = "✕ 不正解　正解：Atlantis";
     }
@@ -53,6 +56,7 @@ function showResult2(isCorrect) {
 
     if (isCorrect) {
         result.textContent = "〇 正解！";
+        score++
     } else {
         result.textContent = "✕ 不正解　正解：ヴェルトラウム～銘銘編～";
     }
@@ -94,6 +98,7 @@ function showResult3(isCorrect) {
 
     if (isCorrect) {
         result.textContent = "〇 正解！";
+        score++
     } else {
         result.textContent = "✕ 不正解　正解：ニュー・マイ・ノーマル";
     }
@@ -134,6 +139,7 @@ function showResult4(isCorrect) {
 
     if (isCorrect) {
         result.textContent = "〇 正解！";
+        score++
     } else {
         result.textContent = "✕ 不正解　正解：2013年";
     }
@@ -174,6 +180,7 @@ function showResult5(isCorrect) {
 
     if (isCorrect) {
         result.textContent = "〇 正解！";
+        score++
     } else {
         result.textContent = "✕ 不正解　正解：7月8日";
     }
@@ -198,4 +205,21 @@ function A53() {
 
 function A54() {
     showResult5(true);
+}
+
+
+
+function ShowQuiz6() {
+    document.getElementById("quizPage5").classList.add("NewPage");
+    document.getElementById("resultPage").classList.remove("NewPage");
+
+    const final = document.getElementById("finalScore");
+
+    if (score === 5) {
+        final.textContent = "あなたはMrs. GREEN APPLEマスターです！";
+    } else if (score >= 3) {
+        final.textContent = "あなたはMrs. GREEN APPLE好きです";
+    } else {
+        final.textContent = "これからMrs. GREEN APPLEを知っていこう！";
+    }
 }
