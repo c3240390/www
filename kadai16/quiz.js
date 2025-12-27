@@ -81,8 +81,3 @@ function A22() {
     showResult2(true);
 }
 
-function ShowQuiz3(){
-    document.getElementById("quizPage2").classList.add("NewPage");
-    document.getElementById("quizPage3").classList.remove("NewPage");
-
-}
