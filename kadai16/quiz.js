@@ -119,3 +119,43 @@ function A34() {
 function A31() {
     showResult3(true);
 }
+
+
+
+
+
+function ShowQuiz4() {
+    document.getElementById("quizPage3").classList.add("NewPage");
+    document.getElementById("quizPage4").classList.remove("NewPage");
+}
+
+function showResult4(isCorrect) {
+    const result = document.getElementById("result4");
+
+    if (isCorrect) {
+        result.textContent = "〇 正解！";
+    } else {
+        result.textContent = "✕ 不正解　正解：2013年";
+    }
+
+       document.getElementById("Answer4").classList.add("NewPage");
+   document.getElementById("NextBtn4").classList.remove("NewPage");
+
+}
+
+function A41() {
+    showResult4(false);
+}
+
+function A42() {
+    showResult4(false);
+}
+
+function A44() {
+    showResult4(false);
+}
+
+
+function A43() {
+    showResult4(true);
+}
