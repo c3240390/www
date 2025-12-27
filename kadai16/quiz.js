@@ -98,24 +98,24 @@ function showResult3(isCorrect) {
         result.textContent = "✕ 不正解　正解：StaRt";
     }
 
-       document.getElementById("Answer2").classList.add("NewPage");
-   document.getElementById("NextBtn2").classList.remove("NewPage");
+       document.getElementById("Answer3").classList.add("NewPage");
+   document.getElementById("NextBtn3").classList.remove("NewPage");
 
 }
 
 function A32() {
-    showResult2(false);
+    showResult3(false);
 }
 
 function A33() {
-    showResult2(false);
+    showResult3(false);
 }
 
 function A34() {
-    showResult2(false);
+    showResult3(false);
 }
 
 
 function A31() {
-    showResult2(true);
+    showResult3(true);
 }
