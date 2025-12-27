@@ -169,7 +169,7 @@ function ShowQuiz5() {
     document.getElementById("quizPage5").classList.remove("NewPage");
 }
 
-function showResult4(isCorrect) {
+function showResult5(isCorrect) {
     const result = document.getElementById("result5");
 
     if (isCorrect) {
