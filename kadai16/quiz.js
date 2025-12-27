@@ -1,6 +1,6 @@
 function ShowQuiz(){
     document.getElementById("QuizButton").classList.add("NewPage");
-    document.getElementById("quizPage").classList.remove("NewPage");
+    document.getElementById("quizPage1").classList.remove("NewPage");
 
 }
 
@@ -13,11 +13,8 @@ function showResult(isCorrect) {
         result.textContent = "✕ 不正解　正解：Atlantis";
     }
 
-    document.querySelectorAll("#quizPage button").forEach(btn => {
-        btn.disabled = true;
-    });
-
-        document.getElementById("quizPage2").classList.remove("NewPage");
+   document.getElementById("Answer1").classList.add("NewPage");
+   document.getElementById("NextBtn1").classList.remove("NewPage");
 }
 
 
@@ -43,7 +40,7 @@ function A4() {
 
 
 function ShowQuiz2(){
-    document.getElementById("quizPage").classList.add("NewPage");
+    document.getElementById("quizPage1").classList.add("NewPage");
     document.getElementById("quizPage2").classList.remove("NewPage");
 
 }

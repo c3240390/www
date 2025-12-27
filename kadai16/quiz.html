@@ -22,29 +22,32 @@
         <p>Mrs. GREEN APPLEについてのクイズページです！問題は全5問！ぜひ挑戦してみてください！<br>下のボタンを押すと始まります</p>
     </main>
     <button id="QuizButton" onclick="ShowQuiz()">クイズ開始！</button>
-    <div id="quizPage" class="NewPage">
+    <div id="quizPage1" class="NewPage">
         <h2>クイズスタート！</h2>
         <h3>第１問！</h3>
         <p>Mrs. GREEN APPLEが2023年に行ったドームライブの名前は？</p>
+        <div id="Answer1">
         <button onclick="A1()">NOAH no HAKOBUNE</button>
         <button onclick="A2()">BABEL no TOH</button>
         <button onclick="A3()">EDEN no SONO</button>
         <button onclick="A4()">Atlantis</button>
+        </div>
 
     <p id="result"></p>
-   <button id="quizPage2" class="NewPage" onclick="ShowQuiz2()">次に進む</button>
+   <button id="NextBtn1" class="NewPage" onclick="ShowQuiz2()">次に進む</button>
 </div>
 
 <div id="quizPage2" class="NewPage">
     <h3>第２問！</h3>
     <p>Mrs. GREEN APPLEが2024年に行ったスタジアムツアーのタイトルはゼンジン未到と何？</p>
+    
     <button onclick="A21()">リライアンス～復誦編～</button>
     <button onclick="A22()">ヴェルトラウム～銘銘編～</button>
     <button onclick="A23()">プログレス～実戦編～</button>
     <button onclick="A24()">コンフリクト～前奏編～</button>
 
     <p id="result2"></p>
-    <button id="quizPage3" class="NewPage" onclick="ShowQuiz3()">次に進む</button>
+    <button id="NextBtn2" class="NewPage" onclick="ShowQuiz3()">次に進む</button>
     </div>
 
 
